@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <paths>
+        <files-path name="file0" path="" />
+        <files-path name="file1" path="image" /> <!--相当于Context.getFilesDir() + /image/-->
+        <files-path name="file2" path="audio" /><!--相当于Context.getFilesDir() + /audio/-->
+        <files-path name="file3" path="video" /> <!--相当于Context.getFilesDir() + /video/-->
+        <files-path name="file4" path="download" /> <!--相当于Context.getFilesDir() + /download/-->
+        <files-path name="file5" path="cache" /> <!--相当于Context.getFilesDir() + /cache/-->
+        <cache-path name="cache_file_0" path="" /> <!--相当于Context.getCacheDir()-->
+        <cache-path name="cache_file_1" path="image" /> <!--相当于Context.getCacheDir() + /image/-->
+        <cache-path name="cache_file_2" path="audio" /><!--相当于Context.getCacheDir() + /audio/-->
+        <cache-path name="cache_file_3" path="video" /> <!--相当于Context.getCacheDir() + /video/-->
+        <cache-path name="cache_file_4" path="download" /> <!--相当于Context.getCacheDir() + /download/-->
+        <cache-path name="cache_file_5" path="cache" /> <!--相当于Context.getCacheDir() + /cache/-->
+        <external-path name="external_file_0" path="" /><!--物理路径相当于Environment.getExternalStorageDirectory()-->
+        <external-path name="external_file_1" path="com.uc56.ucexpressbao/image" /><!--物理路径相当于Environment.getExternalStorageDirectory() + /image/-->
+        <external-path name="external_file_2" path="com.uc56.ucexpressbao/audio" /><!--物理路径相当于Environment.getExternalStorageDirectory() + /audio/-->
+        <external-path name="external_file_3" path="com.uc56.ucexpressbao/video" /><!--物理路径相当于Environment.getExternalStorageDirectory() + /video/-->
+        <external-path name="external_file_4" path="com.uc56.ucexpressbao/download" /><!--物理路径相当于Environment.getExternalStorageDirectory() + /download/-->
+        <external-path name="external_file_5" path="com.uc56.ucexpressbao/cache" /><!--物理路径相当于Environment.getExternalStorageDirectory() + /cache/-->
+    </paths>
+
+</resources>
