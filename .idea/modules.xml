@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://D:\Project\Android\takePhoto\TakePhoto.iml" filepath="D:\Project\Android\takePhoto\TakePhoto.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/TakePhoto.iml" filepath="$PROJECT_DIR$/TakePhoto.iml" />
+      <module fileurl="file://D:\Project\Android\takePhoto\app\app.iml" filepath="D:\Project\Android\takePhoto\app\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/takePhoto.iml" filepath="$PROJECT_DIR$/takePhoto.iml" />
       <module fileurl="file://$PROJECT_DIR$/takephotolib/takephotolib.iml" filepath="$PROJECT_DIR$/takephotolib/takephotolib.iml" />
     </modules>
   </component>

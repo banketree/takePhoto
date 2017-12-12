@@ -63,6 +63,7 @@ public class TakePhotoImpl implements TakePhoto {
     private TContextWrap contextWrap;
     private TakeResultListener listener;
     private Uri outPutUri;
+    private Uri cameraOutPutUri;
     private Uri tempUri;
     private CropOptions cropOptions;
     private TakePhotoOptions takePhotoOptions;
@@ -163,9 +164,9 @@ public class TakePhotoImpl implements TakePhoto {
                 if (resultCode == Activity.RESULT_OK) {
                     if(takePhotoOptions!=null&&takePhotoOptions.isCorrectImage())ImageRotateUtil.of().correctImage(contextWrap.getActivity(), tempUri);
                     try {
-                        onCrop(tempUri, Uri.fromFile(new File(TUriParse.parseOwnUri(contextWrap.getActivity(), outPutUri))), cropOptions);
+                        onCrop(tempUri, Uri.fromFile(new File(TUriParse.parseOwnUri(contextWrap.getActivity(), cameraOutPutUri))), cropOptions);
                     } catch (TException e) {
-                        takeResult(TResult.of(TImage.of(outPutUri, fromType)), e.getDetailMessage());
+                        takeResult(TResult.of(TImage.of(cameraOutPutUri, fromType)), e.getDetailMessage());
                         e.printStackTrace();
                     }
                 } else {
@@ -176,9 +177,9 @@ public class TakePhotoImpl implements TakePhoto {
                 if (resultCode == Activity.RESULT_OK) {
                     if(takePhotoOptions!=null&&takePhotoOptions.isCorrectImage())ImageRotateUtil.of().correctImage(contextWrap.getActivity(), outPutUri);
                     try {
-                        takeResult(TResult.of(TImage.of(TUriParse.getFilePathWithUri(outPutUri, contextWrap.getActivity()), fromType)));
+                        takeResult(TResult.of(TImage.of(TUriParse.getFilePathWithUri(cameraOutPutUri, contextWrap.getActivity()), fromType)));
                     } catch (TException e) {
-                        takeResult(TResult.of(TImage.of(outPutUri, fromType)), e.getDetailMessage());
+                        takeResult(TResult.of(TImage.of(cameraOutPutUri, fromType)), e.getDetailMessage());
                         e.printStackTrace();
                     }
                 } else {
@@ -354,6 +355,7 @@ public class TakePhotoImpl implements TakePhoto {
 
     @Override
     public void onPickFromCapture(Uri outPutUri) {
+        cameraOutPutUri = outPutUri;
         this.fromType = TImage.FromType.CAMERA;
         if (PermissionManager.TPermissionType.WAIT.equals(permissionType)) return;
         if (Build.VERSION.SDK_INT >= 23) {
@@ -372,6 +374,7 @@ public class TakePhotoImpl implements TakePhoto {
 
     @Override
     public void onPickFromCaptureWithCrop(Uri outPutUri, CropOptions options) {
+        cameraOutPutUri = outPutUri;
         this.fromType = TImage.FromType.CAMERA;
         if (PermissionManager.TPermissionType.WAIT.equals(permissionType)) return;
         this.cropOptions = options;

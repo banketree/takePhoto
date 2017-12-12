@@ -1,17 +1,17 @@
 apply plugin: 'com.android.application'
 
+def androidConfig = rootProject.ext.android;
+
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.0"
-    enforceUniquePackageName = false
+    compileSdkVersion androidConfig.compileSdkVersion
+    buildToolsVersion androidConfig.buildToolsVersion
 
     defaultConfig {
         applicationId "com.jph.simple"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
