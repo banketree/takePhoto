@@ -6,7 +6,9 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://D:\Project\Android\takePhoto\app\app.iml" filepath="D:\Project\Android\takePhoto\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/takePhoto.iml" filepath="$PROJECT_DIR$/takePhoto.iml" />
+      <module fileurl="file://D:\Project\Android\takePhoto\takePhoto.iml" filepath="D:\Project\Android\takePhoto\takePhoto.iml" />
       <module fileurl="file://$PROJECT_DIR$/takephotolib/takephotolib.iml" filepath="$PROJECT_DIR$/takephotolib/takephotolib.iml" />
+      <module fileurl="file://D:\Project\Android\takePhoto\takephotolib\takephotolib.iml" filepath="D:\Project\Android\takePhoto\takephotolib\takephotolib.iml" />
     </modules>
   </component>
 </project>
